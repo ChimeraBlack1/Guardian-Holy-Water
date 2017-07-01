@@ -3,6 +3,7 @@ import './normalize.css';
 import './App.css';
 import Header from './components/header.js';
 import Water from './components/water.js'
+import Tos from './components/tos.js';
 
 class App extends Component {
   constructor(props) {
@@ -21,12 +22,7 @@ class App extends Component {
 
     console.log(this.state);
 
-    if (this.state.isToggleOn) {
-
-    }
-
   }
-
 
 
   render() {
@@ -36,14 +32,17 @@ class App extends Component {
   		return(
   			<div className="App">
   			<Header />
-		        <button onClick={this.handleClick} className="buyNow">BUY NOW!</button>
+  			<Tos />
+  				<button onClick={this.handleBuy} className="btn buyNow">Buy Anyway!</button>
+		        <button onClick={this.handleClick} className="btn thanks">Oh...No thanks!</button>
 		    </div>
   		);
   	}else {
   		 return (
 		    <div className="App">
+		      <Header />
 		      <Water />
-		      <button onClick={this.handleClick} className="buyNow">BUY NOW!</button>
+		      <button onClick={this.handleClick} className="btn buyNow">BUY NOW!</button>
 		    </div>
 		 );
   	}
