@@ -32,6 +32,9 @@ body {
   height: 100%;
 }
 
+.H1 {
+  padding: 1.5rem 0 0 1.5rem;
+}
 
 .H1, 
 .H2 {
@@ -54,21 +57,61 @@ body {
 
 .H3 {
   font-size: 1.65rem;
+  margin: 2rem 0;
 
 }
 
 p {
   text-align: center;
   width: 60%;
-  margin: 0 auto;
+  margin: 3rem auto;
   text-align: center;
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: 2.15rem;
 
+}
+
+.easy {
+  padding: 2rem 0 1rem 0;
+}
+
+ul {
+  width: 50%;
+  margin: 1rem auto;  
+}
+
+li {
+  text-align: left;
+  padding: 1rem 0;
+  line-height: 2.15rem;
 }
 
 .tripHoly {
   margin-top: 2rem;
+  font-weight: 400;
+}
+
+.buyNow{
+  height: 3.25rem;
+  width: 15rem;
+  background: #f6e6b4; /* Old browsers */
+  background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+  box-shadow: 1px 1px 25px 3px grey;
+  font-weight: 800;
+  text-shadow: 2px 2px grey;
+  cursor: pointer;
+  margin: 0.5rem 0 10rem 0;
+}
+
+.buyNow:hover {
+  background: #ed9017; /* Old browsers */
+  background: -moz-linear-gradient(top, #ed9017 0%, #f6e6b4 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ed9017 0%,#f6e6b4 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ed9017 0%,#f6e6b4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed9017', endColorstr='#f6e6b4',GradientType=0 ); /* IE6-9 */
 }
 
 .holyWaterBottle {
