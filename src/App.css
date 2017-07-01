@@ -101,7 +101,7 @@ li {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
   box-shadow: 1px 1px 25px 3px grey;
   font-weight: 800;
-  text-shadow: 2px 2px grey;
+  text-shadow: 2px 2px 2px grey;
   cursor: pointer;
   margin: 0.5rem 0 10rem 0;
 }
@@ -112,6 +112,7 @@ li {
   background: -webkit-linear-gradient(top, #ed9017 0%,#f6e6b4 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #ed9017 0%,#f6e6b4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed9017', endColorstr='#f6e6b4',GradientType=0 ); /* IE6-9 */
+  text-shadow: -2px -2px 2px grey;
 }
 
 .holyWaterBottle {

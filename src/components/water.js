@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default class Water extends Component {
 	render () {
 		
@@ -22,7 +23,6 @@ that you can only see if you look very closely and believe in the power of almig
 You will instantly feel the power of the lord cleansing you.  This doesn’t mean evil spirits or demons were
 inside you, it’s just how powerful the lord’s touch feels.</li>
 				</ul>
-				<button className="buyNow">BUY NOW!</button>
 			</div>
 		);
 	}
