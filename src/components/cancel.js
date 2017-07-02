@@ -20,7 +20,7 @@ export default class CancelBtn extends Component {
 
 		if (this.state.hover === false){
 
-			letterStyle = {
+			var letterStyle = {
 				background: "linear-gradient(to bottom, #f85032 0%,#f16f5c 0%,#f02f17 100%,#e73827 100%)", /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 				filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 )", /* IE6-9 */
 				height: "3.25rem",
@@ -35,7 +35,7 @@ export default class CancelBtn extends Component {
 
 		}else {
 
-			var letterStyle = {
+			letterStyle = {
 				background: "linear-gradient(to bottom, #e73827 0%,#f02f17 0%,#f16f5c 100%,#f85032 100%)", /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 				filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#e73827', endColorstr='#f85032',GradientType=0 )", /* IE6-9 */
 			  	textShadow: "-2px -2px 2px grey",
