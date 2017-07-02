@@ -35,7 +35,7 @@ export default class BuyBtn extends Component {
 
 		}else {
 
-			var letterStyle = {
+			letterStyle = {
 			    background: "linear-gradient(to bottom, #ed9017 0%,#f6e6b4 100%)", /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed9017', endColorstr='#f6e6b4',GradientType=0 )", /* IE6-9 */
 			  	textShadow: "-2px -2px 2px grey",
