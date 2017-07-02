@@ -5,6 +5,7 @@ import Header from './components/header.js';
 import Water from './components/water.js'
 import Tos from './components/tos.js';
 import CancelBtn from './components/cancel.js';
+import BuyBtn from './components/buy.js';
 
 class App extends Component {
   constructor(props) {
@@ -12,17 +13,16 @@ class App extends Component {
     this.state = {page: 1};
 
     // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.page2 = this.page2.bind(this);
   }
 
-   handleClick() {
+   page2 () {
     this.setState({page: 2});
 
   }
 
-   handleBuy () {
+   page3 () {
     this.setState({page: 3, isToggleOn: false});
-	console.log(this.state);
   }
 
 
@@ -35,7 +35,7 @@ class App extends Component {
 		    <div className="App">
 		      <Header />
 		      <Water />
-		      <button onClick={this.handleClick} className="btn buyNow">BUY NOW!</button>
+          <BuyBtn onClick={this.page2.bind(this)} />
 		    </div>
   		);
   	}else if(this.state.page === 2) {
@@ -43,8 +43,8 @@ class App extends Component {
 		    <div className="App">
 	  			<Header />
 	  			<Tos />
-	  				<button onClick={this.handleBuy.bind(this)} className="btn buyNow">Buy Anyway!</button>
-			        <button onClick={this.handleClick.bind(this)} className="btn thanks">Oh...No thanks!</button>
+	  				<button onClick={this.page3.bind(this)} className="btn buyNow">Buy Anyway!</button>
+			        <button onClick={this.page2.bind(this)} className="btn thanks">Oh...No thanks!</button>
 		    </div>
 		 );
   	} else if(this.state.page === 3){

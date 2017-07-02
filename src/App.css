@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
     overflow-x: hidden !important;
 }
