@@ -18,6 +18,12 @@ export default class Qty extends Component {
 		const listStyles = {
 			listStyle: "none",
 			display: "inline-block",
+			textAlign: "center",
+			fontWeight: "800",
+		}
+
+		const inputStyle = {
+			margin: "0 0 0 5rem",
 		}
 
 		const taxRate = {
@@ -30,7 +36,7 @@ export default class Qty extends Component {
 
 		return(
 			<ul style={listStyles}>
-				<li>Qty <input hint="Input 1" value={this.state.inputValue} onChange={this.updateInputValue.bind(this)}/> </li>
+				<li>Qty <input style={inputStyle} hint="Input 1" value={this.state.inputValue} onChange={this.updateInputValue.bind(this)}/> </li>
 				<li>Price ${price}</li>
 				<li>Subtotal ${subtotal.toFixed(2)}</li>
 				<li>Tax ${tax.toFixed(2)}</li>

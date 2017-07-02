@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import img from '../img/hw_bottle.png';
 
+
 export default class HolyWater extends Component {
 
 	render() {
@@ -8,7 +9,7 @@ export default class HolyWater extends Component {
 		var holyWaterStyle = {
 		  background: "url(" + img + ") no-repeat center center",
 		  height: "30rem",
-		  width: "100%",
+		  width: "50%",
 	  	  display: "inline-block",
 		}
 
