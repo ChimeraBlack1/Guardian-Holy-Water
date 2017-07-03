@@ -1,54 +1,83 @@
 import React, { Component } from 'react';
 
 export default class Shipping extends Component {
+
+	constructor (props) {
+		super(props);
+		this.state = {
+			name: "First Name",
+			value: "",
+		};
+	}
+
+	handleFocus (e) {
+		this.setState({name: ""});
+	}
+
+	handleChange (e) {
+		this.setState({value: e.target.value});
+	}
+
+	handleBlur () {
+
+		if(this.state.value === "") {
+			this.setState({
+				name: "First Name"
+			});
+		}
+	}
+
+
 	render() {
 
-		const inputStyles = {
-			position: "absolute",
-			right: "11rem",
+		const inputStyle = {
+			borderTop: "0",
+			borderRight: "0",
+			borderLeft: "0",
+			borderBottom: "2px solid #333",
+			textAlign: "left",
+			fontFamily: "Open Sans, sans-serif",
+  			margin: "0",
+  			display: "block"
 		}
 
-		// const ulStyles = {
+		const labelStyle = {
+			position: "absolute",
+			top: "0",
+			left: "0",
+		}
 
-		// }
+		const spanStyle = {
+			position: "absolute",
+			textAlign: "left",
+			top: "0",
+			left: "0",
+			zIndex: "1",
+			width: "10rem",
 
-		return(
-			<form>
-				<ul>
-					<li>
-						<label for="first">First Name*</label>
-						<input style={inputStyles} name="first" type="text" />
-					</li>
-					<li>
-						<label for="last">Last Name*</label>
-						<input style={inputStyles} name="last" type="text" />
-					</li>
-					<li>
-						<label for="add1">Address Line 1*</label>
-						<input style={inputStyles} name="add1" type="text" />
-					</li>
-					<li>
-						<label for="add2">Address Line 2 (Optional)</label>
-						<input style={inputStyles} name="add2" type="text" />
-					</li>
-					<li>
-						<label for="prov">State or Province</label>
-						<input style={inputStyles} name="prov" type="text" />
-					</li>
-					<li>
-						<label for="postal">Zip or Postal</label>
-						<input style={inputStyles} name="postal" type="text" />
-					</li>
-					<li>
-						<label for="city">City</label>
-						<input style={inputStyles} name="city" type="text" />
-					</li>
-					<li>
-						<label for="phone">Phone</label>
-						<input style={inputStyles} name="phone" type="text" />
-					</li>
-				</ul>
-			</form>
+		}
+
+		const formStyle = {
+			display: "inline-block",
+			position: "relative",
+			backgroundColor: "red",
+		}
+
+		const container = {
+			float: "left",
+		}
+
+		const name = "first-name";
+
+		return (
+			<div style={container}>
+				<div style={formStyle}>
+					<label style={labelStyle}>
+						<span style={spanStyle}>{this.state.name}</span>
+						<input style={inputStyle} onFocus={this.handleFocus.bind(this)} onBlur={this.handleBlur.bind(this)} name={name} onChange={this.handleChange.bind(this)} value={this.state.value} type="text" />
+					</label>
+				</div>
+			</div>
 		);
 	}
 }

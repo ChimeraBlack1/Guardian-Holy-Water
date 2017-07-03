@@ -31,10 +31,10 @@ export default class Finalize extends Component {
   				margin: "2.25rem  auto",
   				display: "block",
   				fontFamily: "Open Sans, sans-serif",
-				borderRadius: "25px",
+				borderRadius: "10px",
 			}
 
-		}else {
+		} else {
 
 			letterStyle = {
 				background: "linear-gradient(to bottom, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%)", /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -48,7 +48,7 @@ export default class Finalize extends Component {
   				margin: "2.25rem  auto",
   				display: "block",
   				fontFamily: "Open Sans, sans-serif",
-  				borderRadius: "25px",
+  				borderRadius: "10px",
 			  }
 		}
 		
