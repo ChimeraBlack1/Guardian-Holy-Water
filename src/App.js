@@ -7,6 +7,11 @@ import Tos from './components/tos.js';
 import CancelBtn from './components/cancel.js';
 import BuyBtn from './components/buy.js';
 import Order from './components/order.js';
+import Shipping from './components/shipping.js';
+import ConfirmAddy from './components/confirmAddy.js';
+import ChangeAddy from './components/changeAddy.js';
+import OrderSuccess from './components/success.js';
+import BuyMore from './components/buyMore';
 
 
 export default class App extends Component {
@@ -14,8 +19,6 @@ export default class App extends Component {
     super(props);
     this.state = {page: 1};
 
-    // This binding is necessary to make `this` work in the callback
-    this.page2 = this.page2.bind(this);
   }
 
    page1 ()  {
@@ -32,6 +35,10 @@ export default class App extends Component {
 
   page4() {
     this.setState({page: 4, isToggleOn: false});
+  }
+
+  page5() {
+    this.setState({page: 5, isToggleOn: false});
   }
 
   render() {
@@ -57,11 +64,30 @@ export default class App extends Component {
   		return(
   			<div className="App">
           <Order />
-          <BuyBtn onClick={this.page4.bind(this)} />
+          <Shipping />
+          <ConfirmAddy onClick={this.page4.bind(this)} />
   				<CancelBtn onClick={this.page1.bind(this)} />
 		    </div>
   		);
-  	}
+  	} else if (this.state.page === 4) {
+      return (
+        <div className="App">
+          <Order />
+          <BuyBtn onClick={this.page5.bind(this)} />
+          <ChangeAddy onClick={this.page3.bind(this)}/>
+          <CancelBtn onClick={this.page1.bind(this)} />
+        </div>
+        
+      );
+    } else if (this.state.page === 5) {
+      return (
+        <div className="App">
+          <OrderSuccess />
+          <BuyMore onClick={this.page3.bind(this)} />
+        </div>
+
+      );
+    }
    
   }
 }

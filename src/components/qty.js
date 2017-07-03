@@ -29,6 +29,7 @@ export default class Qty extends Component {
 		const taxRate = {
 			Ontario: 0.13
 		}
+		
 		const price = 14.99;
 		const subtotal = this.state.inputValue * price;
 		const tax = subtotal * taxRate.Ontario;

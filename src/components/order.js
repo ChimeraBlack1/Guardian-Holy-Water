@@ -6,6 +6,7 @@ import MediaQuery from 'react-responsive';
 import HolyWater from './holyWater.js';
 import Qty from './qty.js';
 
+
 export default class Order extends Component {
 	render() {
 		return(
