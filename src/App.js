@@ -12,13 +12,13 @@ import ConfirmAddy from './components/confirmAddy.js';
 import ChangeAddy from './components/changeAddy.js';
 import OrderSuccess from './components/success.js';
 import BuyMore from './components/buyMore';
+import Finalize from './components/finalize.js';
 
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {page: 1};
-
   }
 
    page1 ()  {
@@ -30,15 +30,15 @@ export default class App extends Component {
   }
 
    page3 () {
-    this.setState({page: 3, isToggleOn: false});
+    this.setState({page: 3});
   }
 
   page4() {
-    this.setState({page: 4, isToggleOn: false});
+    this.setState({page: 4});
   }
 
   page5() {
-    this.setState({page: 5, isToggleOn: false});
+    this.setState({page: 5});
   }
 
   render() {
@@ -73,7 +73,7 @@ export default class App extends Component {
       return (
         <div className="App">
           <Order />
-          <BuyBtn onClick={this.page5.bind(this)} />
+          <Finalize onClick={this.page5.bind(this)} />
           <ChangeAddy onClick={this.page3.bind(this)}/>
           <CancelBtn onClick={this.page1.bind(this)} />
         </div>

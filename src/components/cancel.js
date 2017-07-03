@@ -31,6 +31,7 @@ export default class CancelBtn extends Component {
   				margin: "2.25rem  auto",
   				display: "block",
   				fontFamily: "Open Sans, sans-serif",
+  				borderRadius: "5px",
 			}
 
 		}else {
@@ -47,6 +48,7 @@ export default class CancelBtn extends Component {
   				margin: "2.25rem  auto",
   				display: "block",
   				fontFamily: "Open Sans, sans-serif",
+  				borderRadius: "5px",
 			  }
 		}
 		

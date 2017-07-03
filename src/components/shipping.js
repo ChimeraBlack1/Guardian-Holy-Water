@@ -8,9 +8,9 @@ export default class Shipping extends Component {
 			right: "11rem",
 		}
 
-		const ulStyles = {
+		// const ulStyles = {
 
-		}
+		// }
 
 		return(
 			<form>
