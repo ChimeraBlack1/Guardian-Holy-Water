@@ -43,6 +43,7 @@ export default class Input extends Component {
   			display: "block",
   			outline: "0",
   			width: "20vw",
+  			height: "2rem",
   			minWidth: "100px",
 		}
 
@@ -61,6 +62,7 @@ export default class Input extends Component {
 
 
 		if (this.state.active === true) {
+
 			var spanStyle = {
 				position: "absolute",
 				textAlign: "left",
@@ -84,6 +86,9 @@ export default class Input extends Component {
 	  			margin: "0",
 	  			display: "block",
 	  			outline: "0",
+	  			width: "20vw",
+	  			height: "2rem",
+  				minWidth: "100px",
 
 			}
 
@@ -97,7 +102,6 @@ export default class Input extends Component {
 				width: "10rem",
 				color: "#333",
 				transition: "top 500ms",
-
 			}
 		}
 

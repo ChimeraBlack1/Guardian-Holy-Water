@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Input from "./inputField"
+import FormRow from "./formRow"
 
 export default class Shipping extends Component {
 
@@ -14,7 +15,7 @@ render () {
 
 	const backGround = {
 		width: "100%",
-		height: "40vh",
+		height: "50vh",
 		position: "relative",
 		textAlign: "left",
 		marginBottom: "10rem",
@@ -25,38 +26,29 @@ render () {
 		top: 0,
 		left: 0,
 		margin: "1rem",
-		paddingLeft: "15vw",
+		paddingLeft: "27.5vw",
 	}
 
 	const container2 = {
 		position: "absolute",
 		top: 0,
 		margin: "1rem",
-		right: "30vw",
+		right: "47.5vw",
 
 	}
 
 
 	const row = {
-		margin: "3.5rem 0 3.5rem 0",
+		margin: "5rem 0",
 	}
 
 		return (
 			<div style={backGround}>
 
 				<div style={container}>
-					<div style={row}>
-						<Input name="First Name" />
-					</div>
-					<div style={row}>
-						<Input name="Last Name" />
-					</div>
-					<div style={row}>
-						<Input name="Address line 1" />
-					</div>
-					<div style={row}>
-						<Input name="Address line 2" />
-					</div>
+
+					<FormRow />
+
 				</div>
 
 
