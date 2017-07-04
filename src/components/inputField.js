@@ -7,11 +7,12 @@ export default class Input extends Component {
 		this.state = {
 			name: this.props.name,
 			value: "",
+			active: false,
 		};
 	}
 
 	handleFocus (e) {
-		this.setState({name: ""});
+		this.setState({active: true});
 	}
 
 	handleChange (e) {
@@ -22,23 +23,27 @@ export default class Input extends Component {
 
 		if(this.state.value === "") {
 			this.setState({
-				name: this.props.name,
+				active: false,
 			});
 		}
 	}
 
 
+
 	render() {
 
-		const inputStyle = {
+		var inputStyle = {
 			borderTop: "0",
 			borderRight: "0",
 			borderLeft: "0",
-			borderBottom: "2px solid #333",
+			borderBottom: "2px solid #ccc",
 			textAlign: "left",
 			fontFamily: "Open Sans, sans-serif",
   			margin: "0",
-  			display: "block"
+  			display: "block",
+  			outline: "0",
+  			width: "20vw",
+  			minWidth: "100px",
 		}
 
 		const labelStyle = {
@@ -47,35 +52,63 @@ export default class Input extends Component {
 			left: "0",
 		}
 
-		const spanStyle = {
-			position: "absolute",
-			textAlign: "left",
-			top: "0",
-			left: "0",
-			zIndex: "1",
-			width: "10rem",
-
-		}
+		
 
 		const formStyle = {
 			display: "inline-block",
 			position: "relative",
 		}
 
-		const container = {
 
+		if (this.state.active === true) {
+			var spanStyle = {
+				position: "absolute",
+				textAlign: "left",
+				top: "-3rem",
+				left: "0",
+				zIndex: "1",
+				width: "10rem",
+				transition: "top 200ms",
+				color: "blue",
+
+			}
+
+			inputStyle = {
+
+				borderTop: "0",
+				borderRight: "0",
+				borderLeft: "0",
+				borderBottom: "2px solid blue",
+				textAlign: "left",
+				fontFamily: "Open Sans, sans-serif",
+	  			margin: "0",
+	  			display: "block",
+	  			outline: "0",
+
+			}
+
+		} else {
+			spanStyle = {
+				position: "absolute",
+				textAlign: "left",
+				top: "0",
+				left: "0",
+				zIndex: "1",
+				width: "10rem",
+				color: "#333",
+				transition: "top 500ms",
+
+			}
 		}
 
 
 		return (
-			<div style={container}>
 				<div style={formStyle}>
 					<label style={labelStyle}>
 						<span style={spanStyle}>{this.state.name}</span>
 						<input style={inputStyle} onFocus={this.handleFocus.bind(this)} onBlur={this.handleBlur.bind(this)} name={this.props.name} onChange={this.handleChange.bind(this)} value={this.state.value} type="text" />
 					</label>
 				</div>
-			</div>
 		);
 	}
 }
