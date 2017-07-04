@@ -4,8 +4,6 @@ import MediaQuery from 'react-responsive'
 
 export default class FormRow extends Component {
 
-
-
 	render() {
 
 		const desktop = {
@@ -35,7 +33,6 @@ export default class FormRow extends Component {
 						<Input name="Address line 2" />
 					</div>
 				</MediaQuery>
-
 				<MediaQuery query='(min-width: 576px) and (max-width: 767px)'>
 					<div style={phone}>
 						<Input name="Address line 2" />
