@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Input from "./inputField"
 
 export default class Shipping extends Component {
 
@@ -9,73 +10,41 @@ export default class Shipping extends Component {
 			value: "",
 		};
 	}
+render () {
 
-	handleFocus (e) {
-		this.setState({name: ""});
+	const backGround = {
+		width: "100%",
+		height: "40vh",
+		position: "relative",
+		textAlign: "left",
+		marginBottom: "10rem",
 	}
 
-	handleChange (e) {
-		this.setState({value: e.target.value});
-	}
-
-	handleBlur () {
-
-		if(this.state.value === "") {
-			this.setState({
-				name: "First Name"
-			});
-		}
+	const container = {
+		position: "absolute",
+		top: 0,
+		left: 0,
+		margin: "1rem",
+		paddingLeft: "15vw",
 	}
 
 
-	render() {
-
-		const inputStyle = {
-			borderTop: "0",
-			borderRight: "0",
-			borderLeft: "0",
-			borderBottom: "2px solid #333",
-			textAlign: "left",
-			fontFamily: "Open Sans, sans-serif",
-  			margin: "0",
-  			display: "block"
-		}
-
-		const labelStyle = {
-			position: "absolute",
-			top: "0",
-			left: "0",
-		}
-
-		const spanStyle = {
-			position: "absolute",
-			textAlign: "left",
-			top: "0",
-			left: "0",
-			zIndex: "1",
-			width: "10rem",
-
-		}
-
-		const formStyle = {
-			display: "inline-block",
-			position: "relative",
-			backgroundColor: "red",
-		}
-
-		const container = {
-			float: "left",
-		}
-
-		const name = "first-name";
+	const row = {
+		margin: "3.5rem 0 3.5rem 0",
+	}
 
 		return (
-			<div style={container}>
-				<div style={formStyle}>
-					<label style={labelStyle}>
-						<span style={spanStyle}>{this.state.name}</span>
-						<input style={inputStyle} onFocus={this.handleFocus.bind(this)} onBlur={this.handleBlur.bind(this)} name={name} onChange={this.handleChange.bind(this)} value={this.state.value} type="text" />
-					</label>
+			<div style={backGround}>
+				<div style={container}>
+					<div style={row}>
+						<Input name="First Name" />
+					</div>
+					<div style={row}>
+						<Input name="Last Name" />
+					</div>
+					<div style={row}>
+						<Input name="Address" />
+					</div>
 				</div>
 			</div>
 		);

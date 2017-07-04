@@ -15,6 +15,7 @@ import BuyMore from './components/buyMore';
 import Finalize from './components/finalize.js';
 
 
+
 export default class App extends Component {
   constructor(props) {
     super(props);
