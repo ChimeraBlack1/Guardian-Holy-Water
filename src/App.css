@@ -67,12 +67,11 @@ body {
 
 p {
   text-align: center;
-  width: 60%;
   margin: 3rem auto;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
-  line-height: 3.15rem;
-
+  line-height: 3.65rem;
+  padding: 10%;
 }
 
 

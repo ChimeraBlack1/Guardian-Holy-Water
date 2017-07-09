@@ -15,30 +15,36 @@ export default class FormRow extends Component {
 		return(
 			<Grid>
 			    <Row className="show-grid">
-			    	<Col xs={12} sm={6}>
+			    	<Col sm={2}></Col>
+			    	<Col xs={12} sm={4}>
 			     		<Input name="First Name" />
 			     	</Col>
-					<Col xs={12} sm={6}>
+					<Col xs={12} sm={4}>
 			     		<Input name="Last Name" />
 			     	</Col>
+			     	<Col sm={2}></Col>
 			    </Row>
 
 			    <Row className="show-grid">
-			    	<Col xs={12} sm={6}>
+			    	<Col sm={2}></Col>
+			    	<Col xs={12} sm={4}>
 			     		<Input name="Street Address" />
 			     	</Col>
-					<Col xs={12} sm={6}>
+					<Col xs={12} sm={4}>
 			     		<Input name="Phone Number" />
 			     	</Col>
+			     	<Col sm={2}></Col>
 			    </Row>
 
 				<Row className="show-grid">
-			    	<Col xs={12} sm={6}>
+					<Col sm={2}></Col>
+			    	<Col xs={12} sm={4}>
 			     		<Input name="City" />
 			     	</Col>
-					<Col xs={12} sm={6}>
+					<Col xs={12} sm={4}>
 			     		<Input name="Province" />
 			     	</Col>
+			     	<Col sm={2}></Col>
 			    </Row>
 
 			 </Grid>

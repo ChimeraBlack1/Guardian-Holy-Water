@@ -48,11 +48,13 @@ export default class Input extends Component {
   			minWidth: "100px",
 		}
 
+
 		const labelStyle = {
 			margin: "4rem 0",
 			position: "relative",
 			top: "0",
 			left: "0",
+			width: "100%",
 		}
 
 		

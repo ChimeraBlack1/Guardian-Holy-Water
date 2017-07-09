@@ -10,7 +10,7 @@ export default class Water extends Component {
 			<div className={styles.container}>
 				<p>Our water is the best water for getting rid of demons and evil spirits.  This water is blessed using our “Triple Holiness” blessing technique (patent pending).</p>
 				<HolyWater />
-				<h3 className={styles.H3}>The "Triple Holiness" technique.</h3>
+				<h3 className={styles.easy}>The "Triple Holiness" technique.</h3>
 				<p className={styles.light}>The water comes from a spring high in the andes mountains.  It is harvested by a blind priest who brings it down to his village where it sits in a barrel
 Inside a church for 10 years.  From there it is shipped to Israel where it is blessed by a deaf priest.  Once he has blessed the water it is then shipped
 to the Vatican to be blessed by the Pope.  At this stage the tears of a virgin alter boy are added and it is shipped here to Canada for one final blessing.

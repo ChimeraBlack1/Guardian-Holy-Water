@@ -51,52 +51,62 @@ export default class Total extends Component {
 		return(
 			<Grid>
 				<Row>
-					<Col xs={6} md={6}>
+					<Col sm={2}></Col>
+					<Col xs={6} sm={4}>
 						<span>Qty</span>
 					</Col>
-					<Col xs={6} md={6}>
+					<Col xs={6} md={4}>
 						<input style={inputStyle} hint="Input 1" value={this.state.inputValue} onChange={this.updateInputValue.bind(this)}/>
 					</Col>
+					<Col sm={2}></Col>
 				</Row>
 
 				<Row>
-					<Col xs={6} md={6}>
+					<Col sm={2}></Col>
+					<Col xs={6} md={4}>
 						<span>Price</span>
 					</Col>
-					<Col xs={6} md={6}>
+					<Col xs={6} md={4}>
 						${price}						
 					</Col>
+					<Col sm={2}></Col>
 				</Row>
 
 				<Row>
-					<Col xs={6} md={6}>
+					<Col sm={2}></Col>
+					<Col xs={6} md={4}>
 						<span>Subtotal</span>
 					</Col>
-					<Col xs={6} md={6}>
+					<Col xs={6} md={4}>
 						${subtotal.toFixed(2)}						
 					</Col>
+					<Col sm={2}></Col>
 				</Row>
 
 				<Row>
-					<Col xs={6} md={6}>
+					<Col sm={2}></Col>
+					<Col xs={6} md={4}>
 						<span>Tax</span>
 					</Col>
-					<Col xs={6} md={6}>
+					<Col xs={6} md={4}>
 						${tax.toFixed(2)}						
 					</Col>
+					<Col sm={2}></Col>
 				</Row>
 
 				<Row>
-					<Col xs={6} md={6}>
+					<Col sm={2}></Col>
+					<Col xs={6} md={4}>
 						<div style={totalStyle}>
 							<span>Total</span>
 						</div>
 					</Col>
-					<Col xs={6} md={6}>
+					<Col xs={6} md={4}>
 						<div style={totalStyle}>
 							${total.toFixed(2)}
 						</div>						
 					</Col>
+					<Col sm={2}></Col>
 				</Row>
 
 			</Grid>

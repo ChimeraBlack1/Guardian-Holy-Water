@@ -13,8 +13,6 @@ import ChangeAddy from './components/changeAddy.js';
 import OrderSuccess from './components/success.js';
 import BuyMore from './components/buyMore';
 import Finalize from './components/finalize.js';
-import Btn2 from './components/btn2.js';
-
 
 export default class App extends Component {
   constructor(props) {
@@ -48,7 +46,6 @@ export default class App extends Component {
   	if (this.state.page === 1){
   		return (
 		    <div className={styles.App}>
-        <Btn2 />
 		      <Header />
 		      <Water />
           <BuyBtn onClick={this.page2.bind(this)} />
