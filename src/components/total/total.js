@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col, Grid } from 'react-bootstrap'
 import styles from './total.css'
-import Finalize from '../finalize'
+
 
 export default class Total extends Component {
 	constructor(props){
@@ -38,12 +38,12 @@ export default class Total extends Component {
 		const tax = subtotal * taxRate.Ontario;
 		const total = (tax + subtotal);
 		
-		const order = {
-			Qty: this.state.inputValue,
-			subtotal: subtotal,
-			tax: tax,
-			total: total,
-		}
+		// const order = {
+		// 	Qty: this.state.inputValue,
+		// 	subtotal: subtotal,
+		// 	tax: tax,
+		// 	total: total,
+		// }
 
 
 		return(
