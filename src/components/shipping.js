@@ -1,74 +1,49 @@
 import React, { Component } from 'react'
-import Input from "./inputField"
-import FormRow from "./formRow"
+import { Grid } from 'react-bootstrap'
+import { Row }from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
+import Input from './inputField.js'
 
-export default class Shipping extends Component {
+export default class FormRow extends Component {
 
-	constructor (props) {
+	constructor(props) {
 		super(props);
-		this.state = {
-			name: "First Name",
-			value: "",
-		};
-	}
-render () {
-
-	const backGround = {
-		width: "100%",
-		height: "50vh",
-		position: "relative",
-		textAlign: "left",
-		marginBottom: "10rem",
+		this.state = {state: "none"};
 	}
 
-	const container = {
-		position: "absolute",
-		top: 0,
-		left: 0,
-		margin: "1rem",
-		paddingLeft: "27.5vw",
-	}
+	render() {
+		return(
+			<Grid>
+			    <Row className="show-grid">
+			    	<Col xs={12} sm={6}>
+			     		<Input name="First Name" />
+			     	</Col>
+					<Col xs={12} sm={6}>
+			     		<Input name="Last Name" />
+			     	</Col>
+			    </Row>
 
-	const container2 = {
-		position: "absolute",
-		top: 0,
-		margin: "1rem",
-		right: "47.5vw",
+			    <Row className="show-grid">
+			    	<Col xs={12} sm={6}>
+			     		<Input name="Street Address" />
+			     	</Col>
+					<Col xs={12} sm={6}>
+			     		<Input name="Phone Number" />
+			     	</Col>
+			    </Row>
 
-	}
+				<Row className="show-grid">
+			    	<Col xs={12} sm={6}>
+			     		<Input name="City" />
+			     	</Col>
+					<Col xs={12} sm={6}>
+			     		<Input name="Province" />
+			     	</Col>
+			    </Row>
 
-
-	const row = {
-		margin: "5rem 0",
-	}
-
-		return (
-			<div style={backGround}>
-
-				<div style={container}>
-
-					<FormRow />
-
-				</div>
-
-
-				<div style={container2}>
-					<div style={row}>
-						<Input name="State or Province" />
-					</div>
-					<div style={row}>
-						<Input name="City" />
-					</div>
-					<div style={row}>
-						<Input name="Postal or Zip" />
-					</div>
-					<div style={row}>
-						<Input name="Phone" />
-					</div>
-				</div>
-
-
-			</div>
+			 </Grid>
 		);
 	}
 }
+
+

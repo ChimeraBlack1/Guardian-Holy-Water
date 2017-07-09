@@ -34,21 +34,22 @@ export default class Input extends Component {
 
 		var inputStyle = {
 			borderTop: "0",
-			borderRight: "0",
+			borderRight: "1px solid #eee",
 			borderLeft: "0",
-			borderBottom: "2px solid #ccc",
+			borderBottom: "2px solid #555",
 			textAlign: "left",
 			fontFamily: "Open Sans, sans-serif",
   			margin: "0",
   			display: "block",
   			outline: "0",
-  			width: "20vw",
+  			width: "100%",
   			height: "2rem",
   			minWidth: "100px",
 		}
 
 		const labelStyle = {
-			position: "absolute",
+			margin: "4rem 0",
+			position: "relative",
 			top: "0",
 			left: "0",
 		}
@@ -56,7 +57,7 @@ export default class Input extends Component {
 		
 
 		const formStyle = {
-			display: "inline-block",
+			display: "block",
 			position: "relative",
 		}
 
@@ -66,29 +67,33 @@ export default class Input extends Component {
 			var spanStyle = {
 				position: "absolute",
 				textAlign: "left",
-				top: "-3rem",
+				top: "0",
 				left: "0",
 				zIndex: "1",
-				width: "10rem",
-				transition: "top 200ms",
-				color: "blue",
+				width: "15rem",
+				color: "#555",
+				fontSize: "1.35rem",
+				fontWeight: "bold",
+				transition: "transform 300ms ease, fontSize 1200ms",
+				transform: "translateY(-3rem)",
 
 			}
 
 			inputStyle = {
 
 				borderTop: "0",
-				borderRight: "0",
+				borderRight: "1px solid #bbb",
 				borderLeft: "0",
-				borderBottom: "2px solid blue",
+				borderBottom: "2px solid #333",
 				textAlign: "left",
 				fontFamily: "Open Sans, sans-serif",
-	  			margin: "0",
 	  			display: "block",
 	  			outline: "0",
-	  			width: "20vw",
+	  			width: "100%",
 	  			height: "2rem",
   				minWidth: "100px",
+  				boxShadow: "2px 2px 20px 25px #eee inset"
+  				
 
 			}
 
@@ -99,9 +104,11 @@ export default class Input extends Component {
 				top: "0",
 				left: "0",
 				zIndex: "1",
-				width: "10rem",
-				color: "#333",
-				transition: "top 500ms",
+				width: "100%",
+				color: "#666",
+				transition: "transform 300ms ease, fontSize 1200ms",
+				transform: "translateY(0)",
+				
 			}
 		}
 
