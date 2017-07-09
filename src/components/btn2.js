@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { Button } from 'react-toolbox/lib/button/Button' 
 
 
-export default class BuyBtn extends Component {
+export default class Btn2 extends Component {
     constructor(props) {
       super(props);
       this.state = {hover: false};
@@ -54,7 +55,7 @@ export default class BuyBtn extends Component {
 		
 
 		return(
-			<button style={letterStyle} onMouseOver={this.handleMouseOver.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)} onClick={this.props.onClick}>BUY NOW!</button>
+			<Button label="Ahhhhh yeeeah boiz" raised />
 		);
 	}
 }
