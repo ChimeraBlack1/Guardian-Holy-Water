@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './normalize.css';
-import './App.css';
+import styles from './App.css';
 import Header from './components/header.js';
 import Water from './components/water.js'
 import Tos from './components/tos.js';
@@ -47,7 +47,7 @@ export default class App extends Component {
 
   	if (this.state.page === 1){
   		return (
-		    <div className="App">
+		    <div className={styles.App}>
         <Btn2 />
 		      <Header />
 		      <Water />
@@ -56,7 +56,7 @@ export default class App extends Component {
   		);
   	}else if(this.state.page === 2) {
   		 return (
-		    <div className="App">
+		    <div className={styles.App}>
 	  			<Tos />
           <BuyBtn onClick= {this.page3.bind(this)} />
           <CancelBtn onClick= {this.page1.bind(this)}/>
@@ -64,7 +64,7 @@ export default class App extends Component {
 		 );
   	} else if(this.state.page === 3){
   		return(
-  			<div className="App">
+  			<div className={styles.App}>
           <Order />
           <Shipping />
           <ConfirmAddy onClick={this.page4.bind(this)} />
@@ -73,7 +73,7 @@ export default class App extends Component {
   		);
   	} else if (this.state.page === 4) {
       return (
-        <div className="App">
+        <div className={styles.App}>
           <Order />
           <Finalize onClick={this.page5.bind(this)} />
           <ChangeAddy onClick={this.page3.bind(this)}/>
@@ -83,7 +83,7 @@ export default class App extends Component {
       );
     } else if (this.state.page === 5) {
       return (
-        <div className="App">
+        <div className={styles.App}>
           <OrderSuccess />
           <BuyMore onClick={this.page3.bind(this)} />
         </div>

@@ -4,7 +4,7 @@ import 'react-flex/index.css';
 import MediaQuery from 'react-responsive';
 
 import HolyWater from './holyWater.js';
-import Qty from './qty.js';
+import Total from './total.js';
 
 
 export default class Order extends Component {
@@ -14,14 +14,14 @@ export default class Order extends Component {
 				<MediaQuery query='(min-width: 992px)'>
 					<Flex row alignItems="center">
 						<Item flex={1}><HolyWater /></Item>
-						<Item flex={1}><Qty /></Item>
+						<Item flex={1}><Total /></Item>
 					</Flex>
 				</MediaQuery>
 
 				<MediaQuery query='(max-width: 992px)'>
 					<Flex column alignItems="center">
 						<HolyWater />
-						<Item row flex={1}><Qty /></Item>
+						<Item row flex={1}><Total /></Item>
 					</Flex>
 				</MediaQuery>
 			</div>

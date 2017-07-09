@@ -8,8 +8,9 @@ export default class HolyWater extends Component {
 
 		var holyWaterStyle = {
 		  background: "url(" + img + ") no-repeat center center",
-		  height: "30rem",
+		  height: "500px",
 		  width: "50%",
+		  minWidth: "240px",
 	  	  display: "inline-block",
 		}
 
