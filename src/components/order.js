@@ -4,28 +4,23 @@ import 'react-flex/index.css';
 import MediaQuery from 'react-responsive';
 
 import HolyWater from './holyWater.js';
-import Total from './total.js';
+import Total from './total/total.js';
 
 
 export default class Order extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			value: 1
+		}
+	}
+
+
+
 	render() {
 		return(
-			<div>
-				<MediaQuery query='(min-width: 992px)'>
-					<Flex row alignItems="center">
-						<Item flex={1}><HolyWater /></Item>
-						<Item flex={1}><Total /></Item>
-					</Flex>
-				</MediaQuery>
-
-				<MediaQuery query='(max-width: 992px)'>
-					<Flex column alignItems="center">
-						<HolyWater />
-						<Item row flex={1}><Total /></Item>
-					</Flex>
-				</MediaQuery>
-			</div>
-
+			<HolyWater />
+			<Total value={this.state.value} onChange={this.updateInputValue.bind(this)}/>
 		);
 	}
 }

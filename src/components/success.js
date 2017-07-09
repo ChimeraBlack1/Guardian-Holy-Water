@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-
-import HolyWater from './holyWater';
+import React, { Component } from 'react'
 
 export default class OrderSuccess extends Component {
 	render() {
@@ -10,9 +8,6 @@ export default class OrderSuccess extends Component {
 			<div>
 				<h1>Your order was successful!</h1>
 				<h2>Your order number is {orderNumber.toFixed(0)}</h2>
-				<HolyWater />
-				<span>QTY</span>
-				<span>1</span>
 			</div>
 		);
 	}

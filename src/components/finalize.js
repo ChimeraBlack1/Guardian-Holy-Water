@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 export default class Finalize extends Component {
     constructor(props) {
       super(props);
-      this.state = {hover: false};
+      this.state = {
+      	hover: false,
+      };
     }
 
 	handleMouseOver() {

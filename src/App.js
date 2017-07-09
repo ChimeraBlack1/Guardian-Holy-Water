@@ -1,47 +1,71 @@
-import React, { Component } from 'react';
-import './normalize.css';
-import styles from './App.css';
-import Header from './components/header.js';
-import Water from './components/water.js'
-import Tos from './components/tos.js';
-import CancelBtn from './components/cancel.js';
-import BuyBtn from './components/buy.js';
-import Order from './components/order.js';
-import Shipping from './components/shipping.js';
-import ConfirmAddy from './components/confirmAddy.js';
-import ChangeAddy from './components/changeAddy.js';
-import OrderSuccess from './components/success.js';
-import BuyMore from './components/buyMore';
-import Finalize from './components/finalize.js';
+import React, { Component } from 'react'
+import './normalize.css'
+import styles from './App.css'
+import Header from './components/header'
+import Water from './components/water'
+import Tos from './components/tos'
+import CancelBtn from './components/cancel'
+import BuyBtn from './components/buy'
+import Shipping from './components/shipping'
+import ConfirmAddy from './components/confirmAddy'
+import ChangeAddy from './components/changeAddy'
+import OrderSuccess from './components/success'
+import BuyMore from './components/buyMore'
+import Finalize from './components/finalize'
+import Total from './components/total/total'
+import HolyWater from './components/holyWater'
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {page: 1};
+    this.state = {
+      page: 1,
+    };
   }
 
    page1 ()  {
-    this.setState({page: 1});
+    this.setState({
+      page: 1,
+    });
+
+    console.log(this.state);
   }
 
    page2 () {
-    this.setState({page: 2});
+    this.setState({
+      page: 2,
+    });
+    console.log(this.state);
   }
 
    page3 () {
-    this.setState({page: 3});
+    this.setState({
+      page: 3,
+    });
+
+    console.log(this.state);
   }
 
   page4() {
-    this.setState({page: 4});
+    this.setState({
+      page: 4,
+    });
+
+    console.log(this.state);
   }
 
   page5() {
-    this.setState({page: 5});
+    this.setState({
+      page: 5,
+    });
+
+    console.log(this.state);
   }
 
-  render() {
 
+
+
+  render() {
 
   	if (this.state.page === 1){
   		return (
@@ -62,7 +86,8 @@ export default class App extends Component {
   	} else if(this.state.page === 3){
   		return(
   			<div className={styles.App}>
-          <Order />
+          <HolyWater />
+          <Total />
           <Shipping />
           <ConfirmAddy onClick={this.page4.bind(this)} />
   				<CancelBtn onClick={this.page1.bind(this)} />
@@ -71,7 +96,8 @@ export default class App extends Component {
   	} else if (this.state.page === 4) {
       return (
         <div className={styles.App}>
-          <Order />
+          <HolyWater />
+          <Total />
           <Finalize onClick={this.page5.bind(this)} />
           <ChangeAddy onClick={this.page3.bind(this)}/>
           <CancelBtn onClick={this.page1.bind(this)} />
@@ -81,7 +107,9 @@ export default class App extends Component {
     } else if (this.state.page === 5) {
       return (
         <div className={styles.App}>
-          <OrderSuccess />
+          <HolyWater />
+          <Total />
+          <OrderSuccess />          
           <BuyMore onClick={this.page3.bind(this)} />
         </div>
 
