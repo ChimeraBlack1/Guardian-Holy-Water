@@ -1,0 +1,29 @@
+.easy {
+  padding: 2rem 0 1rem 0;
+}
+
+.light {
+  font-weight: 400;
+  text-align: justify;
+  margin: 3rem auto;
+  text-align: left;
+  line-height: 3.65rem;
+  padding: 5%;
+}
+
+
+.card {
+  position: absolute;
+  text-align: left;
+  margin: 3rem auto;
+  font-weight: 800;
+  line-height: 2;
+  padding: 10%;
+}
+
+.cardContainer {
+  position: relative;
+  width: 300px;
+  margin: 2rem auto;
+  height: 275px;
+}

@@ -11,10 +11,7 @@ button {
 body {
     overflow-x: hidden !important;
 }
-.container {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-}
+
 
 .App {
   position: relative;
@@ -22,63 +19,7 @@ body {
   height: 100vh;
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0,0,0,.75);
-    height: 100%;
-}
 
-.header {
-  background: url('./bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.H1 {
-  padding: 1.5rem 0 0 1.5rem;
-}
-
-.H1, 
-.H2 {
-  font-size: 5rem;
-  color: #fff;
-  margin: 0;
-  text-align: left;
-  text-shadow: 5px 5px black;
-}
-
-.H2 {
-  font-size: 3.5rem;
-  text-shadow: -5px 5px black;
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  display: inline-block;
-
-}
-
-.H3 {
-  font-size: 1.65rem;
-  margin: 2rem 0;
-
-}
-
-p {
-  text-align: center;
-  margin: 3rem auto;
-  text-align: left;
-  font-weight: 600;
-  line-height: 3.65rem;
-  padding: 10%;
-}
-
-
-
-.easy {
-  padding: 2rem 0 1rem 0;
-}
 
 ul {
   width: 100%;
@@ -93,10 +34,6 @@ li {
   line-height: 3.15rem;
 }
 
-.light {
-  margin-top: 2rem;
-  font-weight: 400;
-}
 
 .btn {
   height: 3.25rem;
@@ -126,9 +63,7 @@ li {
   text-shadow: -1px -1px 2px grey;
 }
 
-.tos {
-  margin: 2rem 0;
-}
+
 
 /*.holyWaterBottle {
   background: url('hw_bottle.png') no-repeat center center;
@@ -137,12 +72,3 @@ li {
   display: inline-block;
 }
 */
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
